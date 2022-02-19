@@ -92,6 +92,7 @@ public class PhotonConnectionController : MonoBehaviourPunCallbacks
     {
         yield return new WaitForSeconds(1f);
         errorHandler.onErrorSolved();
+
         //After we will replace this with Playfab authentication.
         LoginPanel.SetActive(true);
     }

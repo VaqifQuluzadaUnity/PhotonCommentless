@@ -113,7 +113,9 @@ public class CreateRoomPanelController : MonoBehaviourPunCallbacks
         customRoomProperties = new Hashtable { {"levName",levelName}, {"Pass",roomPass}};
 
         //Create the room options and create room.
-        RoomOptions roomOptions = new RoomOptions { MaxPlayers = playerCount,IsVisible=true,IsOpen=true,CustomRoomProperties=customRoomProperties,CustomRoomPropertiesForLobby=customRoomPropertiesForLobby};
+        RoomOptions roomOptions = new RoomOptions { MaxPlayers = playerCount,IsVisible=true,
+            IsOpen=true,CustomRoomProperties=customRoomProperties,
+            CustomRoomPropertiesForLobby=customRoomPropertiesForLobby};
 
         PhotonNetwork.CreateRoom(roomName, roomOptions,TypedLobby.Default);
     }
